@@ -1,0 +1,20 @@
+<h1>Statistics Added</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <% @statistics.each do |s| %>
+      <tr>
+        <td><%= link_to s.name, statistic_path(s) %></td>
+        <td><%= link_to s.url, s.url, target: :blank %></td>
+        <td>
+          <%= link_to "Delete", statistic_path(s), :confirm => "Are you sure?", method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

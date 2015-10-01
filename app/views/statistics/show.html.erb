@@ -1,0 +1,54 @@
+<h1>Statistics for <%= @statistic.name %></h1>
+<div class="row">
+  <div class="col-md-4">
+    Name
+  </div>
+  <div class="col-md-8">
+    <%= @statistic.name %>
+  </div>
+
+  <div class="col-md-4">
+    Url
+  </div>
+  <div class="col-md-8">
+    <%= link_to @statistic.url, @statistic.url, target: :blank %>
+  </div>
+</div>
+
+<h2>Shares</h2>
+<table class="table table-striped">
+  <thead>
+    <th>Network</th>
+    <th>Shares</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Facebook</td>
+      <td><%= @statistic.facebook %></td>
+    </tr>
+    <tr>
+      <td>Google</td>
+      <td><%= @statistic.google %></td>
+    </tr>
+    <tr>
+      <td>Twitter</td>
+      <td><%= @statistic.twitter %></td>
+    </tr>
+    <tr>
+      <td>Reddit</td>
+      <td><%= @statistic.reddit %></td>
+    </tr>
+    <tr>
+      <td>Linkedin</td>
+      <td><%= @statistic.linkedin %></td>
+    </tr>
+    <tr>
+      <td>Pinterest</td>
+      <td><%= @statistic.pinterest %></td>
+    </tr>
+    <tr>
+      <td>Stumbleupon</td>
+      <td><%= @statistic.stumbleupon %></td>
+    </tr>
+  </tbody>
+</table>
